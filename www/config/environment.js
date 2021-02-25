@@ -14,22 +14,39 @@ module.exports = function(environment) {
     },
 
     APP: {
+      // PoolLink
+      PoolLink: 'https://ethpool.phoenixmax.org',
       // API host and port
-      ApiUrl: '//example.net/',
-
+      ApiUrl: '//ethpool.phoenixmax.org/',
+      // ExchaneLinks
+      COINBASELink: 'https://www.coinbase.com',
+      BINANCELink: 'https://binance.us/en/home',
+      STEXLink: 'https://www.stex.com',
+      GraviexLink: 'https://graviex.net',
+      MRRLink: 'https://www.miningrigrentals.com',
+      NHLink: 'https://www.nicehash.com',
+      
       // HTTP mining endpoint
-      HttpHost: 'http://example.net',
+      HttpHost: 'http://ethpool.phoenixmax.org',
       HttpPort: 8888,
 
       // Stratum mining endpoint
-      StratumHost: 'example.net',
-      StratumPort: 8008,
+      StratumHost: 'ethpool.phoenixmax.org',
+      StratumPort: 8002,
 
       // Fee and payout details
-      PoolFee: '1%',
-      PayoutThreshold: '0.5 Ether',
+      PoolFee: '0.5%',
+      PayoutThreshold: '0.025 Ether',
+      PayoutInterval: '24h',
+      Unit: 'ETH',
+      EtherUnit: 'ETH',
 
       // For network hashrate (change for your favourite fork)
+      BlockExplorerLink: 'https://etherscan.io',
+      BlockExplorerAddrLink: 'https://etherscan.io/address',
+      DonationLink: true,
+      DonationAddress: '',
+      BlockReward: 2,
       BlockTime: 14.4
     }
   };
