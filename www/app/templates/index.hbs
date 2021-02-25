@@ -1,32 +1,28 @@
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-5">
-        <h1 style="font-size: 24px">
-          <strong>Open Ethereum Pool</strong>
-        </h1>
-        <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong>, Payouts run twice per day.<br/>
-        <span class="label label-success">PROP</span> Stable and profitable pool with regular payouts.
-      </div>
-      <div class="col-md-3 stats">
-        <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
-        <div><i class="fa fa-tachometer"></i> Pool Hash Rate: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
-        <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
+      <div class="note note-info">
+        <span class="label label-success"> MINIMUM PAYOUT</span> 0.025 ETH <br/>
+        <span class="label Label-success"> PAYOUTS</span> Run every 24 Hours EST.<br/>
+        <span class="label label-success"> PHOENIXMAX</span> Professional, Stable and Profitable.<br/>
+        <span class="label label-success:> BLOCK EXPLORER</span> <a href="https://etherscan.io"> CLICK HERE</a>
+        <div><i class="fa fa-users"></i><b> Miners Online:</b> <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
+        <div><i class="fa fa-tachometer"></i><b> Pool Hash Rate:</b> <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
+        <div><i class="fa fa-money"></i><b> Pool Fee:</b> <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
         {{#if stats.model.stats.lastBlockFound}}
-        <div><i class="fa fa-clock-o"></i> Last Block Found: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
+        <div><i class="fa fa-clock-o"></i><b> Last Block Found:</b> <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
         {{/if}}
-      </div>
-      <div class="col-md-4 stats">
-        <div><i class="fa fa-unlock-alt"></i> Network Difficulty: <span>{{with-metric-prefix stats.difficulty}}</span></div>
-        <div><i class="fa fa-tachometer"></i> Network Hash Rate: <span>{{format-hashrate stats.hashrate}}</span></div>
-        <div><i class="fa fa-bars"></i> Blockchain Height: <span>{{format-number stats.height}}</span></div>
-        <div><i class="fa fa-clock-o"></i> Current Round Variance: <span>{{format-number stats.roundVariance style='percent'}}</span></div>
+        <div><i class="fa fa-unlock-alt"></i><b> Network Difficulty:</b> <span>{{with-metric-prefix stats.difficulty}}</span></div>
+        <div><i class="fa fa-tachometer"></i><b> Network Hash Rate:</b> <span>{{format-hashrate stats.hashrate}}</span></div>
+        <div><i class="fa fa-bars"></i><b> Blockchain Height:</b> <span>{{format-number stats.height}}</span></div>
+        <div><i class="fa fa-clock-o"></i><b> Current Round Variance:</b> <span>{{format-number stats.roundVariance style='percent'}}</span></div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="container">
+<div class="note note-info">
   <div class="stats">
     <h4>Your Stats &amp; Payment History</h4>
     <div class="input-group">
@@ -38,10 +34,24 @@
       </span>
     </div>
   </div>
+  </div>
   <div>
     <hr/>
     <h4 class="note note-info text-center">
-      ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G
+      <span style="color:green"><i class="fab fa-phoenix-squadron" aria-hidden="true"></i> PhoenixMax ETH PPLNS Mining Pool <i class="fab fa-phoenix-squadron fa flip-horizontal" aria-hidden="true"></i></span><br><br>
+      A Premium Ethereum Mining Pool. Our mining pool is highly optimized and hosted on high performance bare metal servers. We offer a low fee and low payout system unlike some of the other pools out there. <br>
+      Come give PhoenixMax Mining Pools a try and see the difference!!
+    </h4>
+    <h4 class="note note-info text-center">
+    <a href="https://www.miningrigrentals.com" target="_blank"><img src="https://www.miningrigrentals.com/images.homelogo.png" border="0"></a><br><br>
+    <i class="fa fa-server" aria-hidden="true"></i> Algorithm: DAGGERHASHIMOTO <br><br>
+    <i class="fa fa-server" aria-hidden="true"></i> Server: ethpool.phoenixmax.org <br><br>
+    <i class="fab fa-megaport" aria-hidden="true"></i> 2G Port: 8002 <br>
+    <i class="fab fa-megaport" aria-hidden="true"></i> 4G Port: 8004 <br>
+    <i class="fab fa-megaport" aria-hidden="true"></i> 8G Port: 8008 <br>
+    <i class="fab fa-megaport" aria-hidden="true"></i>16G Port: 8016 <br>
+    <i class="fa fa-user-astronaut" aria-hidden="true"></i> Username: Wallet ID<br>
+    <i class="fa fa-key" aria-hidden="true"></i> Password: x <br><br>
     </h4>
   </div>
 </div>
