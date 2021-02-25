@@ -5,9 +5,13 @@ html {
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  background: url('/bg.png');
+  	/* Margin bottom by footer height */
+  	margin-bottom: 60px;
+  	background: url('/bg.png');
+background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .footer {
   position: absolute;
@@ -15,9 +19,43 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #f5f5f5;
+  border-top: 1px black solid;
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
+a[href ^= 'http']:not([href *= 'pool.egem.io']):not([href *= 'maplechange.com']):not([href *= 'nicehash.com']):not([href *= 'graviex.net'])not([href *= 'miningrigrentals.com']) {
+    background: transparent url(/favicon16x16.png) no-repeat center right;
+    padding-right: 16px;
+    height: 6px;
+    width: 6px;
+}
+
+.egembubble {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    color: #fff;
+    border-radius: .25em;
+    background-color: #48B03C;
+-webkit-box-shadow: -2px 2px 15px 1px rgba(0,0,0,0.69);
+-moz-box-shadow: -2px 2px 15px 1px rgba(0,0,0,0.69);
+box-shadow: -2px 2px 15px 1px rgba(0,0,0,0.69);
+}
+
+.egembadge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    vertical-align: middle;
+    color: #FBFCFC;
+    background-color: #48B03C;
+    border-color: ##D0F7FF;
+    border-radius: 10px;
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -42,8 +80,13 @@ body > .container {
 
 .jumbotron {
 	margin: 0;
-	padding: 40px 0 15px 0;
-	margin-bottom: 15px;
+	padding: 40px 5px 15px 0;
+	margin-bottom: 10px;
+	background-color: #FBFCFC;
+background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFFFF, #5D5CB8);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFFFF, #5D5CB8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-bottom: 1px black dotted;
 }
 
 code {
@@ -58,7 +101,7 @@ code {
 	color: #dadada;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-	color: #ffffff;
+	color: #FBFCFC;
 }
 .navbar-default .navbar-text {
 	color: #dadada;
@@ -67,21 +110,21 @@ code {
 	color: #dadada;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: #ffffff;
+	color: #FBFCFC;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #ffffff;
-	background-color: #0a6c9d;
+	color: #FBFCFC;
+	background-color: #48B03C;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-	color: #ffffff;
+	color: #FBFCFC;
 	background-color: #69102b;
 }
 .navbar-default .navbar-toggle {
-	border-color: #0a6c9d;
+	border-color: #48B03C;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: #0a6c9d;
+	background-color: #48B03C;
 }
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: #dadada;
@@ -94,7 +137,7 @@ code {
 	color: #dadada;
 }
 .navbar-default .navbar-link:hover {
-	color: #ffffff;
+	color: #FBFCFC;
 }
 
 @media (max-width: 767px) {
@@ -102,26 +145,26 @@ code {
 		color: #dadada;
 	}
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-		color: #ffffff;
+		color: #FBFCFC;
 	}
 	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-		color: #ffffff;
-		background-color: #0a6c9d;
+		color: #FBFCFC;
+		background-color: #48B03C;
 	}
 }
 
 span.logo-1 {
 	font-weight: 700;
-	color: #1994b8;
+	color: #8987DF;
 }
 
 span.logo-2 {
 	font-weight: 300;
-	color: #FFF;
+	color: #FBFCFC;
 }
 
 span.logo-3 {
-	color: #FFF;
+	color: #FBFCFC;
 	font-weight: 100;
 }
 
@@ -135,11 +178,18 @@ span.logo-3 {
 	padding: 15px 30px 15px 15px;
 	border-left: 5px solid #eee;
 	border-radius: 5px;
+	-webkit-box-shadow: 3px 2px 9px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 2px 9px -1px rgba(0,0,0,0.75);
+	box-shadow: 3px 2px 9px -1px rgba(0,0,0,0.75);
 }
 
 .note-info {
-	background-color: #E8F6FC;
-	border-color: #57b5e3;
+	background-color: #D0F7FF;
+	border-color: #48B03C;
+background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .note-danger {
